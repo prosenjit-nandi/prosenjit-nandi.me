@@ -1,0 +1,14 @@
+- name: event-companion
+  url: https://github.com/prosenjit-nandi/event-companion
+  description: "Installable, offline-first PWA for multi-day, multi-stage events — live now/next tracking, personal agenda, and search."
+  tags: [REACT, TYPESCRIPT, "GITHUB ACTIONS CI/CD"]
+
+- name: Travel-Planner
+  url: https://github.com/prosenjit-nandi/Travel-Planner
+  description: "Installable PWA trip planner with live schedule tracking and one-tap Maps/Uber navigation."
+  tags: ["REACT 19", TYPESCRIPT, "CLOUDFLARE PAGES"]
+
+- name: DataStructures
+  url: https://github.com/prosenjit-nandi/DataStructures
+  description: "Java data structures built from scratch with 100% test coverage (JUnit 5 + JaCoCo) and CI via GitHub Actions — paired with an interactive React tutorial app that visualizes each one, auto-deployed to GitHub Pages."
+  tags: [JAVA, "JUNIT 5", "REACT TUTORIAL APP"]

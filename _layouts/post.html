@@ -1,0 +1,11 @@
+---
+layout: default
+---
+<section id="post" style="padding: 90px 48px 100px; max-width: 760px; margin: 0 auto;">
+  <a href="{{ '/' | relative_url }}#writing" class="mono nav-link" style="font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); display: inline-flex; align-items: center; gap: 6px; padding: 0; border-bottom: none;">← Back to writing</a>
+  <h1 class="serif" style="font-size: 42px; font-weight: 500; line-height: 1.15; color: #f4f2ec; margin: 28px 0 10px;">{{ page.title }}</h1>
+  <div class="mono" style="font-size: 12px; color: #8b93a7; letter-spacing: 0.04em; margin-bottom: 40px;">{{ page.date | date: "%B %-d, %Y" }}{% if page.reading_time %} · {{ page.reading_time }} min read{% endif %}</div>
+  <div class="article-body" style="font-size: 17px; line-height: 1.8; color: #d7dbe4;">
+    {{ content }}
+  </div>
+</section>

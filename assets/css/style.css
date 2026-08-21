@@ -1,0 +1,84 @@
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #0b1220;
+  background-image:
+    linear-gradient(rgba(190,205,215,0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(190,205,215,0.045) 1px, transparent 1px);
+  background-size: 48px 48px, 48px 48px;
+  background-attachment: fixed;
+  color: #f4f2ec;
+  font-family: "Public Sans", -apple-system, "Segoe UI", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, .serif { font-family: "Spectral", Georgia, "Times New Roman", serif; }
+.mono { font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace; }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: #e8cf94; }
+
+.nav-link { display: inline-flex; align-items: baseline; gap: 6px; color: #cdd3e0; font-size: 13.5px; letter-spacing: 0.01em; padding: 6px 2px; border-bottom: 1px solid transparent; transition: color 0.15s ease, border-color 0.15s ease; }
+.nav-link .num { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--accent); }
+.nav-link:hover { color: #f4f2ec; border-bottom-color: var(--accent); }
+
+.btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #14100a; font-weight: 600; font-size: 15px; padding: 13px 24px; border-radius: 3px; border: 1px solid var(--accent); transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; }
+.btn-primary:hover { background: #e8cf94; border-color: #e8cf94; transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,0.35); }
+.btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #f4f2ec; font-weight: 500; font-size: 15px; padding: 13px 24px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.22); transition: border-color 0.15s ease, background 0.15s ease; }
+.btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.04); }
+
+.chip { display: inline-block; padding: 7px 14px; font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; color: #cdd3e0; border: 1px solid rgba(255,255,255,0.14); border-radius: 3px; font-family: "IBM Plex Mono", monospace; }
+
+.card { position: relative; border: 1px solid rgba(255,255,255,0.10); border-radius: 3px; background: rgba(255,255,255,0.02); transition: border-color 0.18s ease, background 0.18s ease; }
+.card:hover { border-color: rgba(255,255,255,0.16); background: rgba(255,255,255,0.035); }
+
+.contact-pill { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border: 1px solid rgba(255,255,255,0.16); border-radius: 3px; color: #f4f2ec; font-size: 14.5px; transition: border-color 0.15s ease, background 0.15s ease; }
+.contact-pill:hover { border-color: var(--accent); background: rgba(202,161,85,0.08); }
+
+.section-label { font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #cdd3e0; font-weight: 600; font-family: "Public Sans", sans-serif; margin: 0; display: flex; align-items: center; gap: 10px; }
+.section-num { font-family: "IBM Plex Mono", monospace; color: var(--accent); font-size: 12.5px; }
+
+.ruler { height: 17px; background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.16) 0 1px, transparent 1px 22px); background-position: bottom left; background-repeat: repeat-x; background-size: 100% 8px; border-bottom: 1px solid rgba(255,255,255,0.09); }
+
+.bracket { position: absolute; width: 20px; height: 20px; border: 1.5px solid var(--accent); pointer-events: none; }
+.bracket.tl { top: -9px; left: -9px; border-right: none; border-bottom: none; }
+.bracket.tr { top: -9px; right: -9px; border-left: none; border-bottom: none; }
+.bracket.bl { bottom: -9px; left: -9px; border-right: none; border-top: none; }
+.bracket.br { bottom: -9px; right: -9px; border-left: none; border-top: none; }
+.bracket--hover { opacity: 0; transition: opacity 0.18s ease; }
+.card:hover .bracket--hover { opacity: 1; }
+
+.spec-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.09); }
+.spec-row:last-child { border-bottom: none; }
+.spec-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #8b93a7; }
+.spec-value { font-family: "IBM Plex Mono", monospace; font-size: 13.5px; color: #f4f2ec; font-weight: 500; }
+
+/* Responsive project grid: any number of repos flows naturally, no gaps when
+   the count isn't a clean multiple of a fixed column count. */
+.projects-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 22px; }
+
+.writing-list { display: flex; flex-direction: column; gap: 18px; }
+.writing-entry { display: flex; flex-direction: column; gap: 8px; padding: 26px; }
+
+/* Article body typography (Writing post pages) */
+.article-body h2 { font-size: 26px; font-weight: 500; color: #f4f2ec; margin: 40px 0 14px; }
+.article-body h3 { font-size: 20px; font-weight: 500; color: #f4f2ec; margin: 32px 0 12px; }
+.article-body p { margin: 0 0 20px; }
+.article-body a { text-decoration: underline; text-underline-offset: 3px; }
+.article-body ul, .article-body ol { padding-left: 22px; margin: 0 0 20px; }
+.article-body li { margin-bottom: 8px; }
+.article-body blockquote { margin: 28px 0; padding: 4px 0 4px 22px; border-left: 2px solid var(--accent); color: #b9c0cf; font-style: italic; }
+.article-body code { font-family: "IBM Plex Mono", monospace; font-size: 0.9em; background: rgba(255,255,255,0.06); padding: 2px 6px; border-radius: 3px; }
+.article-body pre { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 4px; padding: 18px; overflow-x: auto; }
+.article-body pre code { background: none; padding: 0; }
+.article-body img { max-width: 100%; border-radius: 3px; }
+
+@media (max-width: 860px) {
+  .hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+  .about-grid, .section-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+  .exp-row { grid-template-columns: 1fr !important; gap: 6px !important; }
+  .exp-row .exp-company-col { border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 12px !important; margin-bottom: 4px !important; }
+  .hero-h1 { font-size: 46px !important; }
+  .plate-num { display: none !important; }
+  .projects-grid { grid-template-columns: 1fr !important; }
+  .edu-grid { grid-template-columns: 1fr !important; }
+  .nav-links { display: none !important; }
+}

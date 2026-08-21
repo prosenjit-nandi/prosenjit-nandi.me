@@ -1,0 +1,18 @@
+title: Prosenjit Nandi
+description: "Prosenjit Nandi — Technology Director and Head of Core Engineering, building scalable platforms, modern APIs, and AI-enabled engineering organizations."
+url: "https://prosenjit-nandi.me"
+baseurl: ""
+
+markdown: kramdown
+permalink: /writing/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - CONTENT-GUIDE.md

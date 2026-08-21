@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+<div style="--accent: #caa155; min-height: 100%; position: relative;">
+
+  <!-- NAV -->
+  <nav style="position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; background: rgba(11,18,32,0.86); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08);">
+    <a href="{{ '/' | relative_url }}" style="display: flex; align-items: center; gap: 12px; color: inherit;">
+      <svg width="30" height="30" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="29" stroke="#caa155" stroke-width="1.2"/>
+        <circle cx="32" cy="32" r="23" stroke="#caa155" stroke-width="1" opacity="0.55"/>
+        <line x1="32" y1="1" x2="32" y2="6" stroke="#caa155" stroke-width="1.2"/>
+        <line x1="32" y1="58" x2="32" y2="63" stroke="#caa155" stroke-width="1.2"/>
+        <line x1="1" y1="32" x2="6" y2="32" stroke="#caa155" stroke-width="1.2"/>
+        <line x1="58" y1="32" x2="63" y2="32" stroke="#caa155" stroke-width="1.2"/>
+        <text x="32" y="39" text-anchor="middle" font-family="Spectral, Georgia, serif" font-size="19" font-weight="600" fill="#f4f2ec">PN</text>
+      </svg>
+      <div class="mono" style="font-size: 13px; letter-spacing: 0.08em; color: #cdd3e0; text-transform: uppercase;">Prosenjit Nandi</div>
+    </a>
+    <div class="nav-links" style="display: flex; align-items: center; gap: 28px;">
+      <a class="nav-link" href="{{ '/' | relative_url }}#about"><span class="num">01</span>About</a>
+      <a class="nav-link" href="{{ '/' | relative_url }}#experience"><span class="num">02</span>Experience</a>
+      <a class="nav-link" href="{{ '/' | relative_url }}#projects"><span class="num">03</span>Projects</a>
+      <a class="nav-link" href="{{ '/' | relative_url }}#writing"><span class="num">04</span>Writing</a>
+      <a class="nav-link" href="{{ '/' | relative_url }}#contact"><span class="num">05</span>Contact</a>
+    </div>
+  </nav>
+
+  {{ content }}
+
+  <footer style="padding: 28px 48px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; gap: 10px;">
+    <svg width="18" height="18" viewBox="0 0 64 64" fill="none">
+      <circle cx="32" cy="32" r="29" stroke="#6b7284" stroke-width="1.2"/>
+      <text x="32" y="39" text-anchor="middle" font-family="Spectral, Georgia, serif" font-size="19" font-weight="600" fill="#6b7284">PN</text>
+    </svg>
+    <div class="mono" style="font-size: 11.5px; letter-spacing: 0.04em; color: #8b93a7;">PROSENJIT NANDI — NEW YORK CITY METRO AREA</div>
+  </footer>
+
+</div>
+
+</body>
+</html>
