@@ -1,49 +1,74 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Prosenjit Nandi — Technology Director, Head of Core Engineering</title>
   <meta name="description" content="Prosenjit Nandi — Technology Director and Head of Core Engineering, building scalable platforms, modern APIs, and AI-enabled engineering organizations.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Public+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <style>
     html { scroll-behavior: smooth; }
     body {
       margin: 0;
       background: #0b1220;
+      background-image:
+        linear-gradient(rgba(190,205,215,0.045) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(190,205,215,0.045) 1px, transparent 1px);
+      background-size: 48px 48px, 48px 48px;
+      background-attachment: fixed;
       color: #f4f2ec;
       font-family: "Public Sans", -apple-system, "Segoe UI", sans-serif;
       -webkit-font-smoothing: antialiased;
     }
     h1, h2, h3, .serif { font-family: "Spectral", Georgia, "Times New Roman", serif; }
+    .mono { font-family: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, monospace; }
     a { color: var(--accent); text-decoration: none; }
     a:hover { color: #e8cf94; }
 
-    .nav-link { color: #cdd3e0; font-size: 14px; letter-spacing: 0.01em; padding: 6px 2px; border-bottom: 1px solid transparent; transition: color 0.15s ease, border-color 0.15s ease; }
+    .nav-link { display: inline-flex; align-items: baseline; gap: 6px; color: #cdd3e0; font-size: 13.5px; letter-spacing: 0.01em; padding: 6px 2px; border-bottom: 1px solid transparent; transition: color 0.15s ease, border-color 0.15s ease; }
+    .nav-link .num { font-family: "IBM Plex Mono", monospace; font-size: 11px; color: var(--accent); }
     .nav-link:hover { color: #f4f2ec; border-bottom-color: var(--accent); }
 
-    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #14100a; font-weight: 600; font-size: 15px; padding: 13px 24px; border-radius: 4px; border: 1px solid var(--accent); transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; }
+    .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--accent); color: #14100a; font-weight: 600; font-size: 15px; padding: 13px 24px; border-radius: 3px; border: 1px solid var(--accent); transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease; }
     .btn-primary:hover { background: #e8cf94; border-color: #e8cf94; transform: translateY(-1px); box-shadow: 0 8px 20px rgba(0,0,0,0.35); }
-    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #f4f2ec; font-weight: 500; font-size: 15px; padding: 13px 24px; border-radius: 4px; border: 1px solid rgba(255,255,255,0.22); transition: border-color 0.15s ease, background 0.15s ease; }
+    .btn-secondary { display: inline-flex; align-items: center; gap: 8px; background: transparent; color: #f4f2ec; font-weight: 500; font-size: 15px; padding: 13px 24px; border-radius: 3px; border: 1px solid rgba(255,255,255,0.22); transition: border-color 0.15s ease, background 0.15s ease; }
     .btn-secondary:hover { border-color: rgba(255,255,255,0.5); background: rgba(255,255,255,0.04); }
 
-    .chip { display: inline-block; padding: 7px 14px; font-size: 12.5px; letter-spacing: 0.03em; text-transform: uppercase; color: #cdd3e0; border: 1px solid rgba(255,255,255,0.14); border-radius: 4px; }
+    .chip { display: inline-block; padding: 7px 14px; font-size: 12px; letter-spacing: 0.03em; text-transform: uppercase; color: #cdd3e0; border: 1px solid rgba(255,255,255,0.14); border-radius: 3px; font-family: "IBM Plex Mono", monospace; }
 
-    .card { border: 1px solid rgba(255,255,255,0.10); border-radius: 6px; background: rgba(255,255,255,0.02); transition: border-color 0.18s ease, transform 0.18s ease, background 0.18s ease; }
-    .card:hover { border-color: rgba(202,161,85,0.55); background: rgba(255,255,255,0.035); transform: translateY(-2px); }
+    .card { position: relative; border: 1px solid rgba(255,255,255,0.10); border-radius: 3px; background: rgba(255,255,255,0.02); transition: border-color 0.18s ease, background 0.18s ease; }
+    .card:hover { border-color: rgba(255,255,255,0.16); background: rgba(255,255,255,0.035); }
 
-    .contact-pill { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border: 1px solid rgba(255,255,255,0.16); border-radius: 999px; color: #f4f2ec; font-size: 14.5px; transition: border-color 0.15s ease, background 0.15s ease; }
+    .contact-pill { display: inline-flex; align-items: center; gap: 10px; padding: 12px 20px; border: 1px solid rgba(255,255,255,0.16); border-radius: 3px; color: #f4f2ec; font-size: 14.5px; transition: border-color 0.15s ease, background 0.15s ease; }
     .contact-pill:hover { border-color: var(--accent); background: rgba(202,161,85,0.08); }
 
-    .section-label { font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); font-weight: 600; }
+    .section-label { font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #cdd3e0; font-weight: 600; font-family: "Public Sans", sans-serif; margin: 0; display: flex; align-items: center; gap: 10px; }
+    .section-num { font-family: "IBM Plex Mono", monospace; color: var(--accent); font-size: 12.5px; }
+
+    .ruler { height: 17px; background-image: repeating-linear-gradient(90deg, rgba(255,255,255,0.16) 0 1px, transparent 1px 22px); background-position: bottom left; background-repeat: repeat-x; background-size: 100% 8px; border-bottom: 1px solid rgba(255,255,255,0.09); }
+
+    .bracket { position: absolute; width: 20px; height: 20px; border: 1.5px solid var(--accent); pointer-events: none; }
+    .bracket.tl { top: -9px; left: -9px; border-right: none; border-bottom: none; }
+    .bracket.tr { top: -9px; right: -9px; border-left: none; border-bottom: none; }
+    .bracket.bl { bottom: -9px; left: -9px; border-right: none; border-top: none; }
+    .bracket.br { bottom: -9px; right: -9px; border-left: none; border-top: none; }
+    .bracket--hover { opacity: 0; transition: opacity 0.18s ease; }
+    .card:hover .bracket--hover { opacity: 1; }
+
+    .spec-row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,0.09); }
+    .spec-row:last-child { border-bottom: none; }
+    .spec-label { font-family: "IBM Plex Mono", monospace; font-size: 11px; letter-spacing: 0.06em; text-transform: uppercase; color: #8b93a7; }
+    .spec-value { font-family: "IBM Plex Mono", monospace; font-size: 13.5px; color: #f4f2ec; font-weight: 500; }
 
     @media (max-width: 860px) {
-      .about-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
+      .hero-grid { grid-template-columns: 1fr !important; gap: 40px !important; }
+      .about-grid, .section-grid { grid-template-columns: 1fr !important; gap: 20px !important; }
       .exp-row { grid-template-columns: 1fr !important; gap: 6px !important; }
       .exp-row .exp-company-col { border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 12px !important; margin-bottom: 4px !important; }
-      .hero-h1 { font-size: 44px !important; }
+      .hero-h1 { font-size: 46px !important; }
+      .plate-num { display: none !important; }
       .projects-grid { grid-template-columns: 1fr !important; }
       .edu-grid { grid-template-columns: 1fr !important; }
       .nav-links { display: none !important; }
@@ -52,45 +77,108 @@
 </head>
 <body>
 
-<div style="--accent: #caa155; min-height: 100%; background: #0b1220;">
+<div style="--accent: #caa155; min-height: 100%; position: relative;">
 
   <!-- NAV -->
-  <nav style="position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 18px 48px; background: rgba(11,18,32,0.86); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08);">
-    <div class="serif" style="font-size: 18px; font-weight: 600; color: #f4f2ec; letter-spacing: 0.01em;">Prosenjit Nandi</div>
-    <div class="nav-links" style="display: flex; align-items: center; gap: 32px;">
-      <a class="nav-link" href="#about">About</a>
-      <a class="nav-link" href="#experience">Experience</a>
-      <a class="nav-link" href="#projects">Projects</a>
-      <a class="nav-link" href="#contact">Contact</a>
+  <nav style="position: sticky; top: 0; z-index: 20; display: flex; align-items: center; justify-content: space-between; padding: 16px 48px; background: rgba(11,18,32,0.86); backdrop-filter: blur(8px); border-bottom: 1px solid rgba(255,255,255,0.08);">
+    <div style="display: flex; align-items: center; gap: 12px;">
+      <svg width="30" height="30" viewBox="0 0 64 64" fill="none">
+        <circle cx="32" cy="32" r="29" stroke="#caa155" stroke-width="1.2"/>
+        <circle cx="32" cy="32" r="23" stroke="#caa155" stroke-width="1" opacity="0.55"/>
+        <line x1="32" y1="1" x2="32" y2="6" stroke="#caa155" stroke-width="1.2"/>
+        <line x1="32" y1="58" x2="32" y2="63" stroke="#caa155" stroke-width="1.2"/>
+        <line x1="1" y1="32" x2="6" y2="32" stroke="#caa155" stroke-width="1.2"/>
+        <line x1="58" y1="32" x2="63" y2="32" stroke="#caa155" stroke-width="1.2"/>
+        <text x="32" y="39" text-anchor="middle" font-family="Spectral, Georgia, serif" font-size="19" font-weight="600" fill="#f4f2ec">PN</text>
+      </svg>
+      <div class="mono" style="font-size: 13px; letter-spacing: 0.08em; color: #cdd3e0; text-transform: uppercase;">Prosenjit Nandi</div>
+    </div>
+    <div class="nav-links" style="display: flex; align-items: center; gap: 28px;">
+      <a class="nav-link" href="#about"><span class="num">01</span>About</a>
+      <a class="nav-link" href="#experience"><span class="num">02</span>Experience</a>
+      <a class="nav-link" href="#projects"><span class="num">03</span>Projects</a>
+      <a class="nav-link" href="#writing"><span class="num">04</span>Writing</a>
+      <a class="nav-link" href="#contact"><span class="num">05</span>Contact</a>
     </div>
   </nav>
 
   <!-- HERO -->
-  <section id="hero" style="display: flex; flex-direction: column; justify-content: center; gap: 22px; min-height: 82vh; padding: 40px 48px 80px; max-width: 900px;">
-    <div class="section-label">Technology Director · Wells Fargo</div>
-    <h1 class="hero-h1" style="font-size: 60px; line-height: 1.08; font-weight: 500; margin: 0; color: #f4f2ec;">Prosenjit Nandi</h1>
-    <p style="font-size: 21px; line-height: 1.5; color: #d7dbe4; margin: 0; max-width: 640px; font-weight: 400;">Head of Core Engineering — building scalable platforms, modern APIs, and AI-enabled engineering organizations across financial services.</p>
-    <div style="display: flex; align-items: center; gap: 10px; color: #8b93a7; font-size: 14.5px;">
-      <span>22+ years in enterprise platform engineering</span>
-      <span style="opacity: 0.5;">·</span>
-      <span>Trenton, New Jersey</span>
-    </div>
-    <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 12px;">
-      <a class="btn-primary" href="#experience">
-        View experience
-        <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#14100a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
-      </a>
-      <a class="btn-secondary" href="mailto:prosenjit.nandi@gmail.com">Get in touch</a>
+  <section id="hero" style="position: relative; overflow: hidden; padding: 64px 48px 90px; max-width: 1180px; margin: 0 auto;">
+    <div class="plate-num serif" aria-hidden="true" style="position: absolute; right: -20px; top: -60px; font-size: 340px; line-height: 1; color: rgba(202,161,85,0.05); font-weight: 500; pointer-events: none; user-select: none;">01</div>
+
+    <div class="hero-grid" style="position: relative; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 64px; align-items: start;">
+
+      <div style="display: flex; flex-direction: column; gap: 22px; padding-top: 36px;">
+        <div class="mono" style="font-size: 12.5px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent); display: flex; align-items: center; gap: 8px;">
+          <span style="width: 16px; height: 1px; background: var(--accent); display: inline-block;"></span>
+          Technology Director · Wells Fargo
+        </div>
+        <h1 class="hero-h1" style="font-size: 62px; line-height: 1.06; font-weight: 500; margin: 0; color: #f4f2ec;">Prosenjit<br>Nandi</h1>
+        <p style="font-size: 20px; line-height: 1.55; color: #d7dbe4; margin: 0; max-width: 520px; font-weight: 400;">Head of Core Engineering — building scalable platforms, modern APIs, and AI-enabled engineering organizations across financial services.</p>
+        <div class="mono" style="display: flex; align-items: center; gap: 10px; color: #8b93a7; font-size: 12.5px; letter-spacing: 0.03em;">
+          <span>22+ YRS IN PLATFORM ENGINEERING</span>
+          <span style="opacity: 0.5;">/</span>
+          <span>TRENTON, NJ</span>
+        </div>
+        <div style="display: flex; flex-wrap: wrap; gap: 14px; margin-top: 10px;">
+          <a class="btn-primary" href="#experience">
+            View experience
+            <svg width="14" height="14" viewBox="0 0 16 16" fill="none" stroke="#14100a" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+          </a>
+          <a class="btn-secondary" href="mailto:prosenjit.nandi@gmail.com">Get in touch</a>
+        </div>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 22px;">
+        <div style="position: relative; width: 100%; max-width: 300px; margin: 0 auto;">
+          <div style="position: relative; border: 1px solid rgba(255,255,255,0.14); border-radius: 2px; overflow: hidden; aspect-ratio: 4 / 5; background: #131c33;">
+            <img src="portrait.jpg" alt="Prosenjit Nandi" style="width: 100%; height: 100%; object-fit: cover; display: block;">
+          </div>
+          <div class="bracket tl"></div>
+          <div class="bracket tr"></div>
+          <div class="bracket bl"></div>
+          <div class="bracket br"></div>
+        </div>
+        <div class="mono" style="text-align: center; font-size: 10.5px; letter-spacing: 0.1em; text-transform: uppercase; color: #8b93a7;">Platform Engineer — Since 2004</div>
+
+        <div style="margin-top: 6px; padding: 4px 2px;">
+          <div class="spec-row">
+            <span class="spec-label">Experience</span>
+            <span class="spec-value">22+ yrs</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Org scale led</span>
+            <span class="spec-value">150+ engineers</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Advisor reach</span>
+            <span class="spec-value">15,000+</span>
+          </div>
+          <div class="spec-row">
+            <span class="spec-label">Customer accounts</span>
+            <span class="spec-value">1M+</span>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
+  <div class="ruler"></div>
+
   <!-- ABOUT -->
-  <section id="about" style="padding: 90px 48px; border-top: 1px solid rgba(255,255,255,0.08); max-width: 1180px; margin: 0 auto;">
+  <section id="about" style="padding: 80px 48px 70px; max-width: 1180px; margin: 0 auto;">
     <div class="about-grid" style="display: grid; grid-template-columns: 220px 1fr; gap: 48px;">
-      <div class="section-label">About</div>
+      <h2 class="section-label"><span class="section-num">01</span>About</h2>
       <div style="display: flex; flex-direction: column; gap: 28px; max-width: 760px;">
         <p style="font-size: 18px; line-height: 1.75; color: #d7dbe4; margin: 0;">For 22+ years I've built and scaled enterprise platforms across financial services. As Technology Director and Head of Core Engineering for Wealth &amp; Investment Management Technology at Wells Fargo, I lead the foundational platform, API ecosystem, and modernization strategy powering digital products for 15,000+ advisors and over a million customer accounts.</p>
         <p style="font-size: 18px; line-height: 1.75; color: #d7dbe4; margin: 0;">Throughout my career at Wells Fargo and JPMorgan Chase, I've led organizations of 150+ engineers, modernized legacy platforms, and built reusable frameworks adopted across hundreds of applications. I'm just as invested in the people side of engineering — mentoring leaders, developing talent, and building high-trust cultures where engineers do their best work.</p>
+
+        <div style="display: flex; gap: 20px; align-items: flex-start; padding: 6px 0 8px;">
+          <div class="serif" aria-hidden="true" style="font-size: 56px; line-height: 1; color: var(--accent); opacity: 0.6;">"</div>
+          <p class="serif" style="font-size: 22px; font-style: italic; line-height: 1.5; color: #f4f2ec; margin: 0; max-width: 620px;">Great platforms are built by great engineering cultures — high-trust, developer-first, and built to last.</p>
+        </div>
+
         <p style="font-size: 18px; line-height: 1.75; color: #d7dbe4; margin: 0;">I recently earned an AI Product Management certification to deepen my focus on responsible AI adoption and GenAI-powered development practices in enterprise engineering.</p>
         <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-top: 8px;">
           <span class="chip">Engineering Leadership</span>
@@ -110,9 +198,9 @@
   </section>
 
   <!-- EXPERIENCE -->
-  <section id="experience" style="padding: 90px 48px; border-top: 1px solid rgba(255,255,255,0.08); max-width: 1180px; margin: 0 auto;">
-    <div style="display: grid; grid-template-columns: 220px 1fr; gap: 48px; margin-bottom: 48px;">
-      <div class="section-label">Experience</div>
+  <section id="experience" style="padding: 80px 48px; border-top: 1px solid rgba(255,255,255,0.08); max-width: 1180px; margin: 0 auto;">
+    <div class="section-grid" style="display: grid; grid-template-columns: 220px 1fr; gap: 48px; margin-bottom: 48px;">
+      <h2 class="section-label"><span class="section-num">02</span>Experience</h2>
       <div></div>
     </div>
 
@@ -121,27 +209,27 @@
       <div class="exp-row" style="display: grid; grid-template-columns: 220px 1fr; gap: 48px;">
         <div class="exp-company-col">
           <div class="serif" style="font-size: 20px; color: #f4f2ec; margin-bottom: 4px;">Wells Fargo</div>
-          <div style="font-size: 13.5px; color: #8b93a7;">4 yrs 10 mos</div>
+          <div class="mono" style="font-size: 12px; color: #8b93a7;">4 YRS 10 MOS</div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 26px;">
           <div>
             <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px;">
               <span style="font-size: 17px; font-weight: 600; color: #f4f2ec;">Technology Director — Head of Core Engineering</span>
-              <span style="font-size: 13.5px; color: #8b93a7;">May 2026 – Present</span>
+              <span class="mono" style="font-size: 12px; color: #8b93a7;">May 2026 – Present</span>
             </div>
             <p style="font-size: 15.5px; line-height: 1.7; color: #b9c0cf; margin: 0; max-width: 640px;">Leading Core Engineering for Wealth &amp; Investment Management Technology — the foundational platform, API ecosystem, and modernization strategy behind digital products used by 15,000+ advisors.</p>
           </div>
           <div>
             <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px;">
               <span style="font-size: 17px; font-weight: 600; color: #f4f2ec;">Technology Director — Head of Account Opening &amp; Maintenance</span>
-              <span style="font-size: 13.5px; color: #8b93a7;">Feb 2024 – May 2026</span>
+              <span class="mono" style="font-size: 12px; color: #8b93a7;">Feb 2024 – May 2026</span>
             </div>
             <p style="font-size: 15.5px; line-height: 1.7; color: #b9c0cf; margin: 0; max-width: 640px;">Directed large-scale expansion of the Account Opening &amp; Maintenance digital platform; drove cloud-native modernization, CI/CD automation, and enterprise-wide engineering-excellence practices.</p>
           </div>
           <div>
             <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px;">
               <span style="font-size: 17px; font-weight: 600; color: #f4f2ec;">Senior Engineering Manager</span>
-              <span style="font-size: 13.5px; color: #8b93a7;">Nov 2021 – Jan 2024</span>
+              <span class="mono" style="font-size: 12px; color: #8b93a7;">Nov 2021 – Jan 2024</span>
             </div>
             <p style="font-size: 15.5px; line-height: 1.7; color: #b9c0cf; margin: 0; max-width: 640px;">Took a major onboarding platform from pilot to national rollout; architected it from inception and built &amp; scaled twenty engineering teams.</p>
           </div>
@@ -151,34 +239,34 @@
       <div class="exp-row" style="display: grid; grid-template-columns: 220px 1fr; gap: 48px;">
         <div class="exp-company-col">
           <div class="serif" style="font-size: 20px; color: #f4f2ec; margin-bottom: 4px;">JPMorgan Chase &amp; Co.</div>
-          <div style="font-size: 13.5px; color: #8b93a7;">10 yrs 1 mo</div>
+          <div class="mono" style="font-size: 12px; color: #8b93a7;">10 YRS 1 MO</div>
         </div>
         <div style="display: flex; flex-direction: column; gap: 26px;">
           <div>
             <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px;">
               <span style="font-size: 17px; font-weight: 600; color: #f4f2ec;">Executive Director — Platform &amp; Engineering</span>
-              <span style="font-size: 13.5px; color: #8b93a7;">Jan 2021 – Oct 2021</span>
+              <span class="mono" style="font-size: 12px; color: #8b93a7;">Jan 2021 – Oct 2021</span>
             </div>
             <p style="font-size: 15.5px; line-height: 1.7; color: #b9c0cf; margin: 0; max-width: 640px;">Led development of a unified, AWS-hosted platform enabling virtual client-advisor interactions for JPM Wealth Management.</p>
           </div>
           <div>
             <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px;">
               <span style="font-size: 17px; font-weight: 600; color: #f4f2ec;">Executive Director — Architecture &amp; Engineering</span>
-              <span style="font-size: 13.5px; color: #8b93a7;">Feb 2020 – Dec 2020</span>
+              <span class="mono" style="font-size: 12px; color: #8b93a7;">Feb 2020 – Dec 2020</span>
             </div>
             <p style="font-size: 15.5px; line-height: 1.7; color: #b9c0cf; margin: 0; max-width: 640px;">Managed the Wealth Management Onboarding Technology Architecture team delivering shared micro-frontend and micro-service components across all lines of business.</p>
           </div>
           <div>
             <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px;">
               <span style="font-size: 17px; font-weight: 600; color: #f4f2ec;">Vice President — Platform &amp; Engineering</span>
-              <span style="font-size: 13.5px; color: #8b93a7;">Apr 2013 – Jan 2020</span>
+              <span class="mono" style="font-size: 12px; color: #8b93a7;">Apr 2013 – Jan 2020</span>
             </div>
             <p style="font-size: 15.5px; line-height: 1.7; color: #b9c0cf; margin: 0; max-width: 640px;">Oversaw scrum teams across the US, UK, and India building platforms for JPMorgan Securities and the International Private Bank.</p>
           </div>
           <div>
             <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px;">
               <span style="font-size: 17px; font-weight: 600; color: #f4f2ec;">Associate Software Engineer — Platform &amp; Engineering</span>
-              <span style="font-size: 13.5px; color: #8b93a7;">Oct 2011 – Mar 2013</span>
+              <span class="mono" style="font-size: 12px; color: #8b93a7;">Oct 2011 – Mar 2013</span>
             </div>
             <p style="font-size: 15.5px; line-height: 1.7; color: #b9c0cf; margin: 0; max-width: 640px;">Integrated the Matrix Framework with 100+ applications across Broker Dealer Services and Chase Wealth Management.</p>
           </div>
@@ -188,12 +276,12 @@
       <div class="exp-row" style="display: grid; grid-template-columns: 220px 1fr; gap: 48px;">
         <div class="exp-company-col">
           <div class="serif" style="font-size: 20px; color: #f4f2ec; margin-bottom: 4px;">Cognizant Technology Solutions</div>
-          <div style="font-size: 13.5px; color: #8b93a7;">5 yrs 8 mos</div>
+          <div class="mono" style="font-size: 12px; color: #8b93a7;">5 YRS 8 MOS</div>
         </div>
         <div>
           <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px;">
             <span style="font-size: 17px; font-weight: 600; color: #f4f2ec;">Senior Technology Consultant</span>
-            <span style="font-size: 13.5px; color: #8b93a7;">Feb 2006 – Sep 2011</span>
+            <span class="mono" style="font-size: 12px; color: #8b93a7;">Feb 2006 – Sep 2011</span>
           </div>
           <p style="font-size: 15.5px; line-height: 1.7; color: #b9c0cf; margin: 0; max-width: 640px;">Co-authored the Matrix framework, a common container for hosting applications with inter-app communication, for JPMorgan Chase Broker Dealer Services.</p>
         </div>
@@ -202,12 +290,12 @@
       <div class="exp-row" style="display: grid; grid-template-columns: 220px 1fr; gap: 48px;">
         <div class="exp-company-col">
           <div class="serif" style="font-size: 20px; color: #f4f2ec; margin-bottom: 4px;">TCG Software Services</div>
-          <div style="font-size: 13.5px; color: #8b93a7;">1 yr 8 mos</div>
+          <div class="mono" style="font-size: 12px; color: #8b93a7;">1 YR 8 MOS</div>
         </div>
         <div>
           <div style="display: flex; flex-wrap: wrap; align-items: baseline; gap: 10px; margin-bottom: 6px;">
             <span style="font-size: 17px; font-weight: 600; color: #f4f2ec;">Software Engineer</span>
-            <span style="font-size: 13.5px; color: #8b93a7;">Jun 2004 – Jan 2006</span>
+            <span class="mono" style="font-size: 12px; color: #8b93a7;">Jun 2004 – Jan 2006</span>
           </div>
           <p style="font-size: 15.5px; line-height: 1.7; color: #b9c0cf; margin: 0; max-width: 640px;">Developed an employment background-verification workflow for Sterling Testing Systems, Kolkata, India.</p>
         </div>
@@ -217,50 +305,72 @@
   </section>
 
   <!-- PROJECTS -->
-  <section id="projects" style="padding: 90px 48px; border-top: 1px solid rgba(255,255,255,0.08); max-width: 1180px; margin: 0 auto;">
-    <div style="display: grid; grid-template-columns: 220px 1fr; gap: 48px; margin-bottom: 40px;">
-      <div class="section-label">Projects</div>
+  <section id="projects" style="padding: 80px 48px; border-top: 1px solid rgba(255,255,255,0.08); max-width: 1180px; margin: 0 auto;">
+    <div class="section-grid" style="display: grid; grid-template-columns: 220px 1fr; gap: 48px; margin-bottom: 40px;">
+      <h2 class="section-label"><span class="section-num">03</span>Projects</h2>
       <p style="font-size: 15.5px; color: #8b93a7; margin: 0; max-width: 560px;">Personal builds outside of Wells Fargo — hands-on with the same modern stack I advocate for at work.</p>
     </div>
 
-    <div class="projects-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px;">
+    <div class="projects-grid" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px;">
 
       <a class="card" href="https://github.com/prosenjit-nandi/event-companion" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; color: inherit;">
+        <div class="bracket bracket--hover tl"></div><div class="bracket bracket--hover tr"></div><div class="bracket bracket--hover bl"></div><div class="bracket bracket--hover br"></div>
         <div style="font-size: 17px; font-weight: 600; color: #f4f2ec;">event-companion</div>
         <p style="font-size: 14.5px; line-height: 1.65; color: #b9c0cf; margin: 0;">Installable, offline-first PWA for multi-day, multi-stage events — live now/next tracking, personal agenda, and search.</p>
-        <div style="font-size: 12.5px; color: #8b93a7; margin-top: auto;">React · TypeScript · GitHub Actions CI/CD</div>
+        <div class="mono" style="font-size: 11.5px; color: #8b93a7; margin-top: auto; letter-spacing: 0.02em;">REACT · TYPESCRIPT · GITHUB ACTIONS CI/CD</div>
       </a>
 
       <a class="card" href="https://github.com/prosenjit-nandi/Travel-Planner" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; color: inherit;">
+        <div class="bracket bracket--hover tl"></div><div class="bracket bracket--hover tr"></div><div class="bracket bracket--hover bl"></div><div class="bracket bracket--hover br"></div>
         <div style="font-size: 17px; font-weight: 600; color: #f4f2ec;">Travel-Planner</div>
         <p style="font-size: 14.5px; line-height: 1.65; color: #b9c0cf; margin: 0;">Installable PWA trip planner with live schedule tracking and one-tap Maps/Uber navigation.</p>
-        <div style="font-size: 12.5px; color: #8b93a7; margin-top: auto;">React 19 · TypeScript · Cloudflare Pages</div>
+        <div class="mono" style="font-size: 11.5px; color: #8b93a7; margin-top: auto; letter-spacing: 0.02em;">REACT 19 · TYPESCRIPT · CLOUDFLARE PAGES</div>
       </a>
 
       <a class="card" href="https://github.com/prosenjit-nandi/DataStructures" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; color: inherit;">
+        <div class="bracket bracket--hover tl"></div><div class="bracket bracket--hover tr"></div><div class="bracket bracket--hover bl"></div><div class="bracket bracket--hover br"></div>
         <div style="font-size: 17px; font-weight: 600; color: #f4f2ec;">DataStructures</div>
         <p style="font-size: 14.5px; line-height: 1.65; color: #b9c0cf; margin: 0;">Core data structures implemented from scratch in Java.</p>
-        <div style="font-size: 12.5px; color: #8b93a7; margin-top: auto;">Java</div>
+        <div class="mono" style="font-size: 11.5px; color: #8b93a7; margin-top: auto; letter-spacing: 0.02em;">JAVA</div>
       </a>
 
       <a class="card" href="https://github.com/prosenjit-nandi/pizza-luvrs" style="display: flex; flex-direction: column; gap: 12px; padding: 26px; color: inherit;">
+        <div class="bracket bracket--hover tl"></div><div class="bracket bracket--hover tr"></div><div class="bracket bracket--hover bl"></div><div class="bracket bracket--hover br"></div>
         <div style="font-size: 17px; font-weight: 600; color: #f4f2ec;">pizza-luvrs</div>
         <p style="font-size: 14.5px; line-height: 1.65; color: #b9c0cf; margin: 0;">Learning project built while working through AWS Developer: Getting Started.</p>
-        <div style="font-size: 12.5px; color: #8b93a7; margin-top: auto;">JavaScript · AWS</div>
+        <div class="mono" style="font-size: 11.5px; color: #8b93a7; margin-top: auto; letter-spacing: 0.02em;">JAVASCRIPT · AWS</div>
       </a>
 
     </div>
   </section>
 
+  <!-- WRITING -->
+  <section id="writing" style="padding: 80px 48px; border-top: 1px solid rgba(255,255,255,0.08); max-width: 1180px; margin: 0 auto;">
+    <div class="section-grid" style="display: grid; grid-template-columns: 220px 1fr; gap: 48px; margin-bottom: 32px;">
+      <h2 class="section-label"><span class="section-num">04</span>Writing</h2>
+      <p style="font-size: 15.5px; color: #8b93a7; margin: 0; max-width: 560px;">Longer-form notes on platform engineering, leadership, and AI-enabled delivery — published here as they're written.</p>
+    </div>
+
+    <div style="border: 1px dashed rgba(255,255,255,0.18); border-radius: 3px; padding: 44px 32px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center;">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="#6b7284" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M4 19.5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v14.5"/>
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H18"/>
+        <path d="M8 7h6M8 10.5h6"/>
+      </svg>
+      <div class="mono" style="font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent);">Next entry</div>
+      <p class="serif" style="font-style: italic; font-size: 18px; color: #b9c0cf; margin: 0; max-width: 420px; line-height: 1.5;">New writing will appear here as it's published.</p>
+    </div>
+  </section>
+
   <!-- EDUCATION -->
-  <section id="education" style="padding: 90px 48px; border-top: 1px solid rgba(255,255,255,0.08); max-width: 1180px; margin: 0 auto;">
-    <div style="display: grid; grid-template-columns: 220px 1fr; gap: 48px;">
-      <div class="section-label">Education</div>
+  <section id="education" style="padding: 80px 48px; border-top: 1px solid rgba(255,255,255,0.08); max-width: 1180px; margin: 0 auto;">
+    <div class="section-grid" style="display: grid; grid-template-columns: 220px 1fr; gap: 48px;">
+      <h2 class="section-label" style="color: #8b93a7;">Education</h2>
       <div class="edu-grid" style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; max-width: 760px;">
         <div>
           <div style="font-size: 17px; font-weight: 600; color: #f4f2ec; margin-bottom: 4px;">Jadavpur University</div>
           <div style="font-size: 14.5px; color: #b9c0cf; margin-bottom: 2px;">B.E., Computer Science &amp; Engineering</div>
-          <div style="font-size: 13.5px; color: #8b93a7;">2000 – 2004</div>
+          <div class="mono" style="font-size: 12px; color: #8b93a7;">2000 – 2004</div>
         </div>
         <div>
           <div style="font-size: 17px; font-weight: 600; color: #f4f2ec; margin-bottom: 4px;">Certification</div>
@@ -272,7 +382,8 @@
 
   <!-- CONTACT -->
   <section id="contact" style="padding: 100px 48px 90px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; display: flex; flex-direction: column; align-items: center; gap: 20px;">
-    <h2 class="serif" style="font-size: 36px; font-weight: 500; margin: 0; color: #f4f2ec;">Let's talk</h2>
+    <h2 class="section-label" style="justify-content: center;"><span class="section-num">05</span>Contact</h2>
+    <h3 class="serif" style="font-size: 36px; font-weight: 500; margin: 8px 0 0; color: #f4f2ec;">Let's talk</h3>
     <p style="font-size: 16.5px; color: #b9c0cf; margin: 0; max-width: 480px; line-height: 1.6;">Open to conversations on platform engineering, technical leadership, and AI-enabled software delivery.</p>
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; margin-top: 12px;">
       <a class="contact-pill" href="mailto:prosenjit.nandi@gmail.com">prosenjit.nandi@gmail.com</a>
@@ -281,10 +392,15 @@
     </div>
   </section>
 
-  <footer style="padding: 28px 48px; border-top: 1px solid rgba(255,255,255,0.08); text-align: center; font-size: 13px; color: #6b7284;">
-    Prosenjit Nandi — Trenton, New Jersey
+  <footer style="padding: 28px 48px; border-top: 1px solid rgba(255,255,255,0.08); display: flex; align-items: center; justify-content: center; gap: 10px;">
+    <svg width="18" height="18" viewBox="0 0 64 64" fill="none">
+      <circle cx="32" cy="32" r="29" stroke="#6b7284" stroke-width="1.2"/>
+      <text x="32" y="39" text-anchor="middle" font-family="Spectral, Georgia, serif" font-size="19" font-weight="600" fill="#6b7284">PN</text>
+    </svg>
+    <div class="mono" style="font-size: 11.5px; letter-spacing: 0.04em; color: #8b93a7;">PROSENJIT NANDI — TRENTON, NEW JERSEY</div>
   </footer>
 
 </div>
+
 </body>
 </html>
